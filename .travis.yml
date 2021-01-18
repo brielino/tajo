@@ -3,4 +3,4 @@ jdk:
   - openjdk8
 
 script:
-  - mvn  clean verify -Drat.numUnapprovedLicenses=100
+  - mvn verify -Drat.numUnapprovedLicenses=100
