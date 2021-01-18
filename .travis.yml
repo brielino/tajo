@@ -2,5 +2,4 @@ language: java
 jdk:
   - openjdk8
 
-install: mvn clean install -q -DfailIfNoTests=false -Dhadoop.version=2.7.1 -Dlicense.skip  -Drat.skip=true -Drat.numUnapprovedLicenses=200
 script: mvn verify -Drat.skip=true  -Drat.numUnapprovedLicenses=200
