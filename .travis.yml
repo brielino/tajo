@@ -8,4 +8,4 @@ addons:
   token: 85bd1d38efd55f2da622d6f56b7812b8aa00d37e
 
 script:
-  - mvn verify -Drat.numUnapprovedLicenses=100
+  - mvn verify -Dhadoop.version=2.7.1
