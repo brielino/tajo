@@ -5,5 +5,4 @@ jdk:
 install:
    - mvn clean install -Drat.skip=true -Drat.numUnapprovedLicenses=200
 script:
-  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
    - mvn clean verify -Drat.skip=true  -Drat.numUnapprovedLicenses=200
