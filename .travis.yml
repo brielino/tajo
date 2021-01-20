@@ -6,10 +6,10 @@ addons:
   sonarcloud:
     organization: "brielino"
     token: "42458880cca1895d2a6f4171d8162394d47967ae"
+    with:
+      java-version: 11
   
 install:
    - mvn clean install -Drat.skip=true -Drat.numUnapprovedLicenses=200
 script:
-   - export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
-   - export PATH=$PATH:$JAVA_HOME/bin
    - mvn sonar:sonar -Dsonar.projectKey=brielino_tajo 
