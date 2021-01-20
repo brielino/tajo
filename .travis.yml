@@ -9,4 +9,4 @@ addons:
 install:
    - mvn clean install -Drat.skip=true -Drat.numUnapprovedLicenses=200
 script:
-   - mvn clean verify sonar:sonar -Dsonar.projectKey=brielino_tajo
+   - mvn clean verify -Drat.skip=true -Drat.numUnapprovedLicenses=200 sonar:sonar -Dsonar.projectKey=brielino_tajo
