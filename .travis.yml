@@ -1,10 +1,12 @@
-
 language: java
 jdk:
-  - openjdk11
+  - openjdk8
 addons:
   sonarcloud:
     organization: "brielino"
     token: "42458880cca1895d2a6f4171d8162394d47967ae"
+  
+install:
+   - mvn clean install -Drat.skip=true -Drat.numUnapprovedLicenses=200
 script:
-   - mvn sonar:sonar -Dsonar.projectKey=brielino_tajo 
+   - mvn clean package 
