@@ -6,8 +6,5 @@ addons:
   sonarcloud:
     organization: "brielino"
     token: "8a2f6a3794a467ce8b8cb972e023300a4a660c4e"
-  
-install:
-   - mvn clean install -Drat.skip=true -Drat.numUnapprovedLicenses=200
 script:
    - mvn sonar:sonar -Dsonar.projectKey=brielino_tajo
