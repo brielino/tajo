@@ -10,6 +10,6 @@ addons:
 install:
    - mvn clean install -Drat.skip=true -Drat.numUnapprovedLicenses=200
 script:
-   - mvn clean package
-   - export JAVA_HOME=~/openjdk11
+   - export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+   - export PATH=$PATH:$JAVA_HOME/bin
    - mvn sonar:sonar -Dsonar.projectKey=brielino_tajo 
