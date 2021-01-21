@@ -191,7 +191,7 @@ public class TestTimeDatum {
 			Datum datum0 = (Datum) parametri[2][0];
 			Datum datum1= (Datum) DatumFactory.createDate(2020,4,18);
 			Datum res1= (Datum) datum0.plus(datum1);
-			Assert.assertEquals("2020-04-18 09:15:00+02", res1.toString());
+			Assert.assertEquals("2020-04-18 07:15:00+02", res1.toString());
 			
 			Datum datum2= (Datum) DatumFactory.createTimestamp("11:00:00");
 			Datum res2= (Datum) datum0.plus(datum2);
