@@ -9,4 +9,4 @@ addons:
 install:
    - mvn clean install -Drat.skip=true -Drat.numUnapprovedLicenses=200
 script:
-   - mvn clean package 
+   - mvn clean package sonar:sonar -Dsonar.projectKey=malavasiale_tajo
