@@ -1,12 +1,13 @@
 language: java
 jdk:
-  - openjdk13
+  - openjdk8
 addons:
   sonarcloud:
     organization: "brielino"
     token: "42458880cca1895d2a6f4171d8162394d47967ae"
-  
+sonarqube-check:
+  image: maven:3.6.3-jdk-11
 install:
    - mvn clean install -Drat.skip=true -Drat.numUnapprovedLicenses=200
 script:
-   - mvn clean verify -Drat.skip=true -Drat.numUnapprovedLicenses=200
+   - mvn clean verify -Drat.skip=true -Drat.numUnapprovedLicenses=200 sonar:sonar -Dsonar.projectKey=brielino_tajo
